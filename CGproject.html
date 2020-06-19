@@ -3,16 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <title>Computer Graphics Project</title>
-    <!-- three.js import -->
+    <!-- three.js import-->
     <script
       type="text/javascript"
       src="./three.js-master/build/three.js"
     ></script>
+
+    <!-- 부가적인 효과 작성을 위한 jquery import-->
     <script
       type="text/javascript"
-      src="./three.js-master/examples/js/libs/dat.gui.min.js"
+      src="https://code.jquery.com/jquery-3.2.0.min.js"
     ></script>
-
+    <!-- startbutton -->
+    <script type="text/javascript">
+      $(function () {
+        $(".content").click(function () {
+          $(".content").hide();
+        });
+      });
+    </script>
     <style>
       body {
         margin: 0;
@@ -26,9 +35,21 @@
   </head>
 
   <body>
-    <!-- Div for the threeJS scene -->
+    <!-- start button 스타일-->
+    <style>
+      .content {
+        margin-top: 200px;
+        margin-bottom: 40%;
+        color: red;
+        text-align: center;
+        font-weight: bolder;
+        font-size: 100px;
+      }
+    </style>
+    <div class="content">Start Button</div>
+    <!-- 렌더링될 화면 -->
     <div id="threejs_scene"></div>
-    <!-- My threeJS Javascript codes here -->
+    <!-- js 파일 연결-->
     <script type="text/javascript" src="CGproject.js"></script>
   </body>
 </html>
